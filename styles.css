@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'DSEG7ModernItalic'; /* Choose a descriptive name for your font */
+    src: url('fnt/DSEG7-Modern/DSEG7Modern-Italic.ttf') format('truetype'); /* Path to TTF file */
+    font-weight: normal; /* Optional: define font weight */
+    font-style: normal;  /* Optional: define font style */
+    font-display: swap;  /* Optional: controls font loading behavior */
+}
+
+* {
+    font-family: monospace;
+    /* background-color: rgb(212, 212, 212); */
+}
+
+#calc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.button-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.row {
+    display: flex;
+    gap : 8px;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 14px;
+    border-width: 4px; */
+}
+
+.invisible {
+   border-color: white;
+   border-style: solid;
+   background-color: white;
+   color: white;
+}
+
+.my-button:hover {
+  background-color: initial; /* Or the specific non-hover background color */
+  color: initial; /* Or the specific non-hover text color */
+}
+
+#display {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: lightgrey;
+  height: 90px;
+  width: 340px;
+  padding-right:16px;
+  text-align: right;
+  border-radius: 16px;
+  font-size: 32px;
+}
+#display p {
+    font-family:"DSEG7ModernItalic";
+}
