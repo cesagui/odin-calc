@@ -73,6 +73,10 @@ buttonContainer.addEventListener("pointerdown", (event)=>{
             clearCalc();
             console.log(target.id + " clicked");;
             break;
+        case "sign":
+            flipSign();
+            console.log(target.id + " clicked");;
+            break;
     }
 });
 
@@ -174,4 +178,13 @@ function displayNumber(num){
 }
 
 function flipSign(){
+    if (currentNumber != null){
+        currentNumber *= -1;
+        displayNumber(currentNumber);
+    } else {
+        if (prevNumber != null){
+            prevNumber *= -1;
+            displayNumber(prevNumber);
+        }
+    }
 }
