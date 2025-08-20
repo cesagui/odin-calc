@@ -11,35 +11,35 @@ buttonContainer.addEventListener("pointerdown", (event)=>{
     switch(target.id){
         case "one":
             updateCurrentNumber(1);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "two":
             updateCurrentNumber(2);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "three":
             updateCurrentNumber(3);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "four":
             updateCurrentNumber(4);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "five":
             updateCurrentNumber(5);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "six":
             updateCurrentNumber(6);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "seven":
             updateCurrentNumber(7);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "eight":
             updateCurrentNumber(8);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "nine":
             updateCurrentNumber(9);
@@ -47,39 +47,117 @@ buttonContainer.addEventListener("pointerdown", (event)=>{
             break;
         case "zero":
             updateCurrentNumber(0);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "add":
             applyOperation(target.id);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "subtract":
             applyOperation(target.id);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "multiply":
             applyOperation(target.id);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "divide":
             applyOperation(target.id);
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "equals":
             evaluate();
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "clear":
             clearCalc();
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
         case "sign":
             flipSign();
-            console.log(target.id + " clicked");;
+            console.log(target.id + " clicked");
             break;
     }
 });
 
+document.addEventListener("keydown", (event) => {
+    
+    switch(event.key){
+        case "1":
+            updateCurrentNumber(1);
+            console.log(event.key + " down");
+            break;
+        case "2":
+            updateCurrentNumber(2);
+            console.log(event.key + " down");
+            break;
+        case "3":
+            updateCurrentNumber(3);
+            console.log(event.key + " down");
+            break;
+        case "4":
+            updateCurrentNumber(4);
+            console.log(event.key + " down");
+            break;
+        case "5":
+            updateCurrentNumber(5);
+            console.log(event.key + " down");
+            break;
+        case "6":
+            updateCurrentNumber(6);
+            console.log(event.key + " down");
+            break;
+        case "7":
+            updateCurrentNumber(7);
+            console.log(event.key + " down");
+            break;
+        case "8":
+            updateCurrentNumber(8);
+            console.log(event.key + " down");
+            break;
+        case "9":
+            updateCurrentNumber(9);
+            console.log(event.key + " down");
+            break;
+        case "0":
+            updateCurrentNumber(0);
+            console.log(event.key + " down");
+            break;
+        case "+":
+            applyOperation("add");
+            console.log(event.key + " down");
+            break;
+        case "-":
+            applyOperation("subtract");
+            console.log(event.key + " down");
+            break;
+        case "*":
+            applyOperation("multiply");
+            console.log(event.key + " down");
+            break;
+        case "/":
+            applyOperation("divide");
+            console.log(event.key + " down");
+            break;
+        case "=":
+            evaluate();
+            console.log(event.key + " down");
+            break;
+        case "Enter":
+            evaluate();
+            console.log(event.key + " down");
+            break;
+        case "c":
+            clearCalc();
+            console.log(event.key + " down");
+            break;
+        // case "sign":
+        //     flipSign();
+        //     console.log(target.id + " clicked");
+        //     break;
+        // NOTE: not sure what key to use for sign
+    }
+});
 function clearCalc(){
     currentNumber = null;
     prevNumber = null;
