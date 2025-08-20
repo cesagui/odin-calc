@@ -3,7 +3,7 @@ const displayText = document.querySelector("#display p")
 let currentNumber = null;
 let prevNumber = null;
 let storedOperation = "";
-const MAX_LENGTH = 13;
+const MAX_LENGTH = 12;
 // let displayingResult = false;
 
 buttonContainer.addEventListener("pointerdown", (event)=>{
