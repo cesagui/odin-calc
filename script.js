@@ -241,13 +241,13 @@ function operate(numA, numB, operator){
             return numA + numB;
             break;
         case 'subtract':
-            return numA - numB;
+            return numB - numA;
             break;
         case 'multiply':
             return numA * numB;
             break;
         case 'divide':
-            return Math.round(numA / numB);
+            return Math.round(numB / numA);
             break;
         case '':
             console.log("ERROR: no operation found");
