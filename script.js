@@ -3,6 +3,7 @@ const displayText = document.querySelector("#display p")
 let currentNumber = null;
 let prevNumber = null;
 let storedOperation = "";
+const MAX_LENGTH = 13;
 // let displayingResult = false;
 
 buttonContainer.addEventListener("pointerdown", (event)=>{
@@ -170,11 +171,15 @@ function updateCurrentNumber(num){
     if (prevNumber != null && storedOperation == ""){
         clearCalc();
     }
-
     if(currentNumber === null){
         currentNumber = num;
     } else {
-        currentNumber = currentNumber * 10 + num;
+        if (currentNumber.toString().length >= MAX_LENGTH){
+            // do nothing (WILL BE CHANGED WITH decimal)
+        } else {
+            currentNumber = currentNumber * 10 + num;
+        }
+
     }
     displayNumber(currentNumber);
 }
@@ -252,7 +257,12 @@ function operate(numA, numB, operator){
 }
 
 function displayNumber(num){
-    displayText.textContent = num;
+    if (num.toString().length > MAX_LENGTH){
+        clearCalc();
+        displayText.textContent = "OVERFLOW";
+    } else {
+        displayText.textContent = num;
+    }
 }
 
 function flipSign(){

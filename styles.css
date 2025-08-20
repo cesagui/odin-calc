@@ -66,6 +66,8 @@ button {
   border-radius: 16px;
   font-size: 32px;
 }
+
 #display p {
     font-family:"DSEG7ModernItalic";
+    max-width: 13ch;
 }
